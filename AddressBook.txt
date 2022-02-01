@@ -33,3 +33,21 @@ mysql> describe address_book;
 | phone_number | bigint(20)       | NO   |     | NULL    |                |
 +--------------+------------------+------+-----+---------+----------------+
 7 rows in set (0.00 sec)
+
+
+
+UC3=>Ability To Insert New Contacts
+
+
+mysql> INSERT INTO address_book(first_name,last_name,city,
+state,zip,phone_number) 
+values('vinit','kumar','lucknow','punjab',909090,1234567890); //Query For Insert New Contact In to Table
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from address_book;                           //Retrieve The Data From Table
++----+------------+-----------+---------+--------+--------+--------------+
+| id | first_name | last_name | city    | state  | zip    | phone_number |
++----+------------+-----------+---------+--------+--------+--------------+
+|  1 | vinit      | kumar     | lucknow | punjab | 909090 |   1234567890 |
++----+------------+-----------+---------+--------+--------+--------------+
+1 row in set (0.00 sec)
