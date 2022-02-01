@@ -1,0 +1,10 @@
+
+UC1=>Create Database For address book;
+
+mysql> CREATE DATABASE addressBookService;//Created Database
+Query OK, 1 row affected (0.00 sec)
+
+
+mysql> use addressBookService;			    //Selected database
+Database changed
+
