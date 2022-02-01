@@ -153,3 +153,28 @@ mysql> select type,count(id) as count from address_book group by type;
 | Friends   |     2 |
 +-----------+-------+
 2 rows in set (0.00 sec)
+
+
+
+
+UC11=>Ability to add person to both Friend and Family
+
+
+
+ INSERT INTO address_book(book_name,first_name,last_name,city,state,zip,phone_number,type) values('Diary2','Nayan','tr','Kochi','Kerala',909456,4231567898,'bridgelab'),('Diary1','Nayan','tr','Kochi','Kerala',909456,4231567898,'Friends');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_book;
++----+-----------+------------+-----------+---------+--------+--------+--------------+-----------+
+| id | book_name | first_name | last_name | city    | state  | zip    | phone_number | type      |
++----+-----------+------------+-----------+---------+--------+--------+--------------+-----------+
+|  2 | Diary2    | vinit      | kumar     | lucknow | punjab | 909090 |   1234567890 | BridgeLab |
+|  3 | Diary1    | noufal     | mc        | Kochi   | Kerala | 909123 |   1234567898 | Friends   |
+|  4 | Diary1    | jamal      | mc        | Kochi   | Kerala | 909456 |   4231567898 | Friends   |
+|  5 | Diary2    | jamal      | mc        | Kochi   | Kerala | 909456 |   4231567898 | bridgelab |
+|  6 | Diary2    | Nayan      | tr        | Kochi   | Kerala | 909456 |   4231567898 | bridgelab |
+|  7 | Diary2    | Nayan      | tr        | Kochi   | Kerala | 909456 |   4231567898 | bridgelab |
+|  8 | Diary1    | Nayan      | tr        | Kochi   | Kerala | 909456 |   4231567898 | Friends   |
++----+-----------+------------+-----------+---------+--------+--------+--------------+-----------+
+7 rows in set (0.00 sec)
