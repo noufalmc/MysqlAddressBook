@@ -8,3 +8,28 @@ Query OK, 1 row affected (0.00 sec)
 mysql> use addressBookService;			    //Selected database
 Database changed
 
+
+UC2=>Create Table
+
+
+mysql> CREATE TABLE address_book(id int unsigned 
+NOT NULL AUTO_INCREMENT
+,first_name varchar(256) 
+NOT NULL,last_name varchar(256) NOT NULL,
+city varchar(256) NOT NULL
+,state varchar(256) NOT NULL,zip int(11)
+,phone_number BIGINT NOT NULL,PRIMARY KEY (id));   //Query For Create Table
+Query OK, 0 rows affected (0.03 sec)
+mysql> describe address_book;
++--------------+------------------+------+-----+---------+----------------+
+| Field        | Type             | Null | Key | Default | Extra          |
++--------------+------------------+------+-----+---------+----------------+
+| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| first_name   | varchar(256)     | NO   |     | NULL    |                |
+| last_name    | varchar(256)     | NO   |     | NULL    |                |
+| city         | varchar(256)     | NO   |     | NULL    |                |
+| state        | varchar(256)     | NO   |     | NULL    |                |
+| zip          | int(11)          | YES  |     | NULL    |                |
+| phone_number | bigint(20)       | NO   |     | NULL    |                |
++--------------+------------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
