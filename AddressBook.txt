@@ -51,3 +51,21 @@ mysql> select * from address_book;                           //Retrieve The Data
 |  1 | vinit      | kumar     | lucknow | punjab | 909090 |   1234567890 |
 +----+------------+-----------+---------+--------+--------+--------------+
 1 row in set (0.00 sec)
+
+
+UC4=>Ability To Edit Contact By Using Name
+
+
+mysql> UPDATE address_book set first_name='noufal',last_name='mc',city='Calicut'
+,state='Kerala',zip=7878790,phone_number=9087654321 where first_name='vinit';   //Query For Update Query
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> select * from address_book;
++----+------------+-----------+---------+--------+---------+--------------+
+| id | first_name | last_name | city    | state  | zip     | phone_number |
++----+------------+-----------+---------+--------+---------+--------------+
+|  1 | noufal     | mc        | Calicut | Kerala | 7878790 |   9087654321 |
++----+------------+-----------+---------+--------+---------+--------------+
+1 row in set (0.00 sec)
