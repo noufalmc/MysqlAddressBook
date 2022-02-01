@@ -138,3 +138,18 @@ mysql> describe address_book;
 | type         | varchar(256)     | NO   |     | NULL    |                |
 +--------------+------------------+------+-----+---------+----------------+
 9 rows in set (0.00 sec)
+
+
+
+UC10=>Ability to get number  of contact persons
+
+
+
+mysql> select type,count(id) as count from address_book group by type;
++-----------+-------+
+| type      | count |
++-----------+-------+
+| BridgeLab |     3 |
+| Friends   |     2 |
++-----------+-------+
+2 rows in set (0.00 sec)
